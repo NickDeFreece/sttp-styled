@@ -1,0 +1,545 @@
+* {
+  box-sizing: border-box;
+  font-family: "arial";
+}
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: #03a3df;
+}
+header, main, footer {
+  width: 90rem;
+}
+header {
+  grid-area: header;
+  background-color: #03a3df;
+  background-image: url("../images/header-grass.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+header {
+  display: grid;
+  grid: "logo hnav hay" 1fr
+        "addr addr addr" 2em
+        / 1fr 1fr 1fr;
+  align-items: end;
+  justify-items: center;
+
+}
+main {
+  grid-area: main;
+  background-color: white;
+  box-shadow: -5px 10px #000000;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+header h1 {
+  grid-area: header;
+  font-size: 4rem;
+  margin: 0px;
+  color: #ecb722;
+  text-align: center;
+  align-self: center;
+  overflow: auto;
+}
+header > a:first-of-type {
+  grid-area: logo;
+  align-self: end;
+  position: relative;
+  bottom: 1em;
+}
+header > img:nth-of-type(1) {
+  grid-area: hay;
+  width: 20%;
+}
+a, p, h2 {
+  text-align: center;
+  text-decoration-line: none;
+}
+section h2 {
+  font-size: xx-large;
+  margin: 0px;
+}
+section > p {
+  font-size: larger;
+}
+footer {
+  grid-area: footer;
+  background-image: url("../images/footerImage.jpg");
+  background-size: cover;
+  display: grid;
+  grid: "logo cards" 1fr
+        "disc cards" auto
+        / 1fr 1fr;
+  box-shadow: -5px 10px #000000;
+  text-decoration-line: none;
+}
+footer > img:first-of-type {
+  grid-area: logo;
+  align-self: center;
+  justify-self: center;
+}
+footer > p:first-of-type {
+  grid-area: disc;
+  color: white;
+}
+@media screen and (max-width: 1400px) {
+  header, main, footer {
+    max-width: 100%;
+  }
+}
+.header-main-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.straight {
+  grid-area: s;
+  width: 100%;
+  display: block;
+  font-size: 2.5rem;
+  font-stretch: ultra-condensed;
+}
+.to {
+  grid-area: to;
+  align-self: end;
+  position: relative;
+  left: 1rem;
+  font-stretch: ultra-condensed;
+}
+.the {
+  grid-area: the;
+  align-self: end;
+  position: relative;
+  right: 3rem;
+  font-stretch: ultra-condensed;
+}
+.point {
+  grid-area: p;
+  width: 100%;
+  display: block;
+  align-self: end;
+}
+.affiliates-list {
+  grid-area: cards;
+  align-items: center;
+  position: relative;
+  bottom: 3rem;
+}
+.affiliates-list .nav-card > p:nth-of-type(2) {
+  font-size: small;
+}
+.header-top-box {
+  grid-area: hnav;
+  width: auto;
+  height: 22rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: end;
+}
+.header-addr-bar {
+  grid-area: addr;
+  display: flex;
+  text-align: center;
+  background-color: lightgray;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2em;
+  flex-shrink: 0;
+  box-shadow: -5px 10px #000000;
+  align-self: end;
+}
+.header-top-box a, .address-bar a {
+  text-decoration-line: none;
+  font-style: normal;
+  color: black;
+}
+.affiliates-list {
+  width: auto;
+  height: 22rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: end;
+}
+.card {
+ border: 5px ridge #ecb722;
+ border-radius: 10px;
+}
+.nav-card {
+  grid-area: nav;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: .5rem .5rem;
+  margin-bottom: .5rem;
+  background-image: url('../images/cardbg-textured.png');
+  background-position: top;
+  border: 4px ridge #ecb722;
+  opacity: .85;
+  transition: margin-bottom .0625s;
+  width: 10rem;
+  height: 15rem;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  text-decoration-line: none;
+}
+.nav-card:hover {
+  margin-bottom: 1.5rem;
+}
+.nav-card > p {
+  color: #ecb722;
+  font-size: 2.5rem;
+  margin: 0rem;
+  text-decoration-line: none;
+}
+.home-card {
+  width: 12rem;
+  height: 20rem;
+  display: grid;
+  grid: "s s s s" 1em
+        "to i i the" auto
+        "p p p p" 1em
+        / 3rem 3rem 3rem 3rem;
+  font-size: 3em;
+}
+.home-card img {
+  grid-area: i;
+  height: 10rem;
+  align-self: start;
+  justify-self: center;
+}
+.home-card span {
+  color: #ecb722;
+  text-transform: uppercase;
+}
+.card1 {
+  grid-area: card1;
+}
+.card2 {
+  grid-area: card2;
+}
+.card3 {
+  grid-area: card3;
+}
+.card4 {
+  grid-area: card4;
+}
+.fa-bullseye {
+  color: #ecb722;
+}
+.box-shadow-small {
+  box-shadow: -5px 5px;
+}
+.round {
+  border-radius: 50%;
+  shape-outside: circle();
+}
+.welcome {
+  width: 80%;
+}
+.welcome > p:first-of-type {
+  grid-area: para1;
+  text-align: justify;
+  font-size: x-large;
+}
+.welcome > img:first-of-type {
+  grid-area: img1;
+  float: left;
+  margin-right: 2em;
+  box-shadow: -5px 5px;
+}
+.class-top-section {
+  width: 80%;
+}
+.class-top-section > p:nth-of-type(1) {
+  grid-area: para2;
+  text-align: justify;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: x-large;
+}
+.class-top-section > img:nth-of-type(1) {
+  grid-area: img2;
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin-left: 2em;
+  box-shadow: -5px 5px;
+}
+.signup-form {
+  background-color: #ecb722;
+  box-shadow: -5px 10px #000000;
+  padding: 1rem;
+  width: min-content;
+  display: grid;
+  grid: "cust-name cust-phone cust-email cust-addr cust-prog submit" auto
+        / 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: .5em;
+}
+@media screen and (max-width: 1440px) {
+  .signup-form {
+    width: 100%;
+    grid: "cust-name cust-phone cust-email" auto
+          "cust-addr cust-prog submit" auto
+          / 1fr 1fr 1fr;
+    grid-gap: 0em;
+  }
+}
+.customer-name-field {
+  grid-area: cust-name;
+}
+.customer-phone-field {
+  grid-area: cust-phone;
+}
+.customer-email-field {
+  grid-area: cust-email;
+}
+.customer-address-field {
+  grid-area: cust-addr;
+}
+.customer-program-field {
+  grid-area: cust-prog;
+}
+.signup-submit {
+  grid-area: submit;
+  height: 80%;
+  align-self: end;
+}
+.form-field {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+}
+.class-list, .staff-list {
+  display: grid;
+  grid: "card1 card2" auto
+        "card3 card4" auto
+        / minmax(20em, 30em) minmax(20em, 30em);
+  grid-gap: 2rem;
+  justify-content: center;
+}
+@media screen and (max-width: 1400px) {
+  .class-list, .staff-list {
+    grid-gap: 1px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .class-list, .staff-list {
+    grid-gap: 1px;
+  }
+}
+.card-section {
+
+}
+.card-section > h2 {
+  margin-bottom: 1em;
+}
+.class-card {
+  display: grid;
+  grid: "level level time time time" 1.5em
+        "name name name name name" 3em
+        "days days days days days" 3em
+        "img img img img img" .75fr
+        "desc desc desc desc desc" minmax(14em, auto)
+        "price price price signup signup" 3.5em
+        / 1fr 1fr 1fr 1fr 1fr;
+  background-image: url('../images/cardbg-textured.png');
+  background-size: 100% 100%;
+  background-origin: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.class-card * {
+  margin: 0px;
+}
+.class-card:hover {
+  box-shadow: 5px 10px #ecb722;
+}
+.class-card > h3:first-of-type {
+  grid-area: name;
+  text-align: center;
+  font-size: xxx-large;
+  font-weight: bold;
+  color: #ecb722;
+  max-height: 3em;
+}
+.class-card > p:first-of-type {
+  grid-area: level;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #ecb722;
+  text-align: left;
+  margin-left: .5em;
+  max-height: 1.5em;
+}
+.class-card > p:nth-of-type(2) {
+  grid-area: time;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #ecb722;
+  text-align: right;
+  margin-right: .5em;
+  max-height: 1.5em;
+}
+.class-card > p:nth-of-type(3) {
+  grid-area: days;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ecb722;
+  padding-top: .15em;
+  max-height: 3em;
+}
+.class-card > img:first-of-type {
+  grid-area: img;
+  clear: both;
+  width: 97%;
+  align-self: flex-start;
+  justify-self: center;
+  border-radius: 10px;
+  border-style: double;
+  margin-bottom: .5em;
+}
+.class-description {
+  grid-area: desc;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  background-color: lightgray;
+  margin: 0px .5em .5em;
+  padding: 0px .5em 0px;
+  border-radius: 10px;
+  border-style: double;
+}
+.class-description p {
+  margin: .5em 0px .5em;
+  text-align: left;
+}
+.class-card > p:nth-of-type(4) {
+  grid-area: price;
+  align-self: center;
+  font-size: x-large;
+  font-weight: bold;
+  color: #ecb722;
+  justify-self: start;
+  margin-left: .5em;
+}
+.class-card > a:last-of-type, .class-card > i:last-of-type {
+  grid-area: signup;
+  align-self: center;
+  background-color: #ecb722;
+  margin-right: .5em;
+  padding: .66em 0px;
+  border-radius: 8px;
+  text-decoration-line: none;
+  color: white;
+  font-family: "arial";
+  font-weight: bold;
+}
+.description-text {
+  background-image: url();
+  background-color: lightgray;
+  margin: 0px .5em 0px;
+  padding: 0px .5em 0px;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  font-size: 1em;
+  border-style: double;
+}
+.tutoring-price-table {
+  max-width: 100%;
+  font-size: x-large;
+  margin-top: 1em;
+}
+.staff-card {
+  display: grid;
+  grid: "level level time time time" 1.5em
+        "name name name name name" 4em
+        "img img img img img" .75fr
+        "desc desc desc desc desc" minmax(14em,min-content)
+        / 1fr 1fr 1fr 1fr 1fr;
+  background-image: url('../images/cardbg-textured.png');
+  background-size: 100% 100%;
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.staff-card h3:first-of-type {
+  overflow: visible;
+  z-index: 1;
+}
+.staff-card > img:first-of-type {
+  border-style: none;
+}
+.staff-card .description-text {
+  margin-bottom: .5em;
+}
+.activity-list {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 80rem;
+}
+.activity-list article {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.activity-list .activity-card {
+  min-width: 13rem;
+  text-align: center;
+  height: 18rem;
+  margin: .5rem 1rem;
+  background-image: url("../images/cardbg-textured.png")
+}
+.activity-list .activity-para {
+  width: 85%;
+}
+.activity-list .activity-card h3 {
+  color: #ecb722;
+}
+.activity-list .activity-para p {
+  text-align: left;
+  font-size: x-large;
+}
+.facility-tour {
+  display: grid;
+  grid: ". header header" 3em
+        "para vid vid" auto
+        / 1fr 1fr 1fr;
+  max-width: 80%;
+}
+@media screen and (max-width: 1400px) {
+  .facility-tour {
+    max-width: 100%;
+  }
+}
+.facility-tour > h1 {
+  grid-area: header;
+  font-size: xx-large;
+}
+.facility-tour > p {
+  grid-area: para;
+  margin: 0px 1em .5em;
+  text-align: right;
+  align-self: start;
+  font-size: 1.5rem;
+}
+.facility-tour > video {
+  grid-area: vid;
+}
