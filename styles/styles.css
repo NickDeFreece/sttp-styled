@@ -542,4 +542,5 @@ footer > p:first-of-type {
 }
 .facility-tour > video {
   grid-area: vid;
+  width: 100%;
 }
