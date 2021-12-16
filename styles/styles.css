@@ -26,7 +26,6 @@ header {
         / 1fr 1fr 1fr;
   align-items: end;
   justify-items: center;
-
 }
 main {
   grid-area: main;
@@ -323,7 +322,6 @@ footer > p:first-of-type {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-
 }
 .class-list, .staff-list {
   display: grid;
@@ -337,14 +335,6 @@ footer > p:first-of-type {
   .class-list, .staff-list {
     grid-gap: 1px;
   }
-}
-@media screen and (max-width: 1400px) {
-  .class-list, .staff-list {
-    grid-gap: 1px;
-  }
-}
-.card-section {
-
 }
 .card-section > h2 {
   margin-bottom: 1em;
