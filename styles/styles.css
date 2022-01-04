@@ -62,7 +62,7 @@ header > img:nth-of-type(1) {
   grid-area: hay;
   width: 20%;
 }
-a, p, h2 {
+a, p, h1, h2 {
   text-align: center;
   text-decoration-line: none;
 }
@@ -97,6 +97,14 @@ footer > p:first-of-type {
   header, main, footer {
     max-width: 100%;
   }
+}
+.sr-only {
+  position: relative;
+  left: -100000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 .header-main-bar {
   display: flex;
@@ -298,6 +306,10 @@ footer > p:first-of-type {
     grid-gap: 0em;
   }
 }
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
 .customer-name-field {
   grid-area: cust-name;
 }
@@ -319,6 +331,11 @@ footer > p:first-of-type {
   align-self: end;
 }
 .form-field {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.form-label {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -533,4 +550,17 @@ footer > p:first-of-type {
 .facility-tour > video {
   grid-area: vid;
   width: 100%;
+}
+.sitemap-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.sitemap-list > li {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 1rem;
+}
+.sitemap-list > li > ul {
+  margin-top: 1rem;
 }

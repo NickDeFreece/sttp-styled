@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
-  <title>About - Straight to the Point</title>
+  <title>Training - Straight to the Point</title>
   <script src="https://kit.fontawesome.com/f3d2ed15b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
   <header>
     <nav class="header-top-box">
       <a href="activities.html" class="card2">
@@ -38,10 +39,10 @@
       </address>
     </div>
   </header>
-  <main>
-    <section class="top-section">
+  <main id="main-content">
+    <section class="top-section" id="top-section">
       <div class="welcome">
-        <h2>Welcome</h2>
+        <h1 title="Welcome" id="welcome">Training at Straight to the Point</h1>
         <img src="images/giap.png" alt="Portrait of the owner, Giap Nguyen" class="round">
         <p>Straight to the Point Archery is a non profit archery education center and training facility founded in 2005 by former olympian Giap Nguyen.  Our state of the art facility incorporates detailed technical video analysis combined with generations of archery experience from certified coaches and instructors.  We house 28 shooting lanes - 14 each of 10 yards and 20 yards - and 2 private coaching rooms. We also have access to 26 additional 20 yard lanes and an outdoor shooting field.</p>
       </div>
@@ -51,39 +52,44 @@
       <p>After submitting this quick form, one of our hard-working staff will contact you as soon as possible using the information provided.</p>
       <form class="signup-form" id="signup-form" name="signup-form">
         <div class="form-field customer-name-field">
-          <label for="customer-name" class="form-label form-required-label">Name</label>
-          <input type="text" id="customer-name" name="customer-name" class="form-text form-required-text">
+          <label for="customer-name" class="form-label form-required-label">Name
+            <input type="text" id="customer-name" name="customer-name" class="form-text form-required-text">
+          </label>
         </div>
         <div class="form-field customer-phone-field">
-          <label for="customer-phone" class="form-label form-required-label">Phone</label>
-          <input type="text" id="customer-phone" name="customer-phone" class="form-text form-required-text">
+          <label for="customer-phone" class="form-label form-required-label">Phone
+            <input type="text" id="customer-phone" name="customer-phone" class="form-text form-required-text">
+          </label>
         </div>
         <div class="form-field customer-email-field">
-          <label for="customer-email" class="form-label">Email</label>
-          <input type="text" id="customer-email" name="customer-email" class="form-text">
+          <label for="customer-email" class="form-label">Email
+            <input type="text" id="customer-email" name="customer-email" class="form-text">
+          </label>
         </div>
         <div class="form-field customer-address-field">
-          <label for="customer-address" class="form-label">Address</label>
-          <input type="text" id="customer-address" name="customer-address" class="form-text">
+          <label for="customer-address" class="form-label">Address
+            <input type="text" id="customer-address" name="customer-address" class="form-text">
+          </label>
         </div>
         <div class="form-field customer-program-field">
-          <label for="programs-list" class="form-label form-required-label">Program</label>
-          <select name="programs" id="programs-list" class="form-select form-required-select">
-            <option value="a101">A101 - Beginner Class</option>
-            <option value="a102">A102 - Intermediate Class</option>
-            <option value="a103">A103 - Advanced Class</option>
-            <option value="p1">Private Tutoring - 1 Lesson</option>
-            <option value="p3">Private Tutoring - 3 Lessons</option>
-            <option value="p10">Private Tutoring - 10 Lessons</option>
-            <option value="t">Upcoming Tournament</option>
-            <option value="y">Youth Program - YMCA, Boy Scouts, Schools, etc.</option>
-            <option value="ge">Group Event</option>
-          </select>
+          <label for="programs-list" class="form-label form-required-label">Program
+            <select name="programs" id="programs-list" class="form-select form-required-select">
+              <option value="a101">A101 - Beginner Class</option>
+              <option value="a102">A102 - Intermediate Class</option>
+              <option value="a103">A103 - Advanced Class</option>
+              <option value="p1">Private Tutoring - 1 Lesson</option>
+              <option value="p3">Private Tutoring - 3 Lessons</option>
+              <option value="p10">Private Tutoring - 10 Lessons</option>
+              <option value="t">Upcoming Tournament</option>
+              <option value="y">Youth Program - YMCA, Boy Scouts, Schools, etc.</option>
+              <option value="ge">Group Event</option>
+            </select>
+          </label>
         </div>
         <input type="submit" value="Send Registration Request" id="signup-submit" name="signup-submit" class="signup-submit">
       </form>
     </section>
-    <section class="classes">
+    <section class="classes" id="class-section">
       <h2>Classes</h2>
       <div class="class-top-section">
         <img src="images/lineup-xsmall.png" alt="A lineup of student archers aiming downrange" class="round">
@@ -92,54 +98,65 @@
       </div>
       <p>All equipment except safety kit is provided!</p>
       <div class="class-list card-section">
-        <article class="card class-card">
-          <h3>A101</h3>
-          <p>Beginner</p>
-          <p>4pm - 5pm</p>
-          <p>Mondays & Wednesdays</p>
-          <img src="images/kids-lineup.JPG" alt="A target with an arrow in it">
+        <article class="card class-card" id="class-a101">
+          <h3 aria-label="Class Name: A101">A101</h3>
+          <h4 class="sr-only" id="class-a101-info">Class Information</h4>
+          <p><span class="sr-only">Class Level: </span>Beginner</p>
+          <p><span class="sr-only">Class Time: </span>4pm - 5pm</p>
+          <p><span class="sr-only">Class Days: </span>Mondays & Wednesdays</p>
+          <img src="images/kids-lineup.JPG" alt="A lineup of student archers aiming downrange">
           <div class="class-description">
+            <h4 class="sr-only" id="class-a101-desc">Class Description</h4>
             <p>A101 is a basic archery course that focuses on beginning archery safety, skills, and drills. Participants learn about archery form, range rules and etiquette. Form training and fun games are introduced in this class.</p>
             <p>Prerequisites: Minimum age 8 years old or 7 w/ pre-evaluation.</p>
           </div>
-          <p>$120 / Month</p>
-          <a href="index.html#signup-section">Sign Up >></a>
+          <h4 class="sr-only">Class Cost</h4>
+          <p id="class-a101-cost">$120 / Month</p>
+          <a href="index.html#signup-section">Sign Up<span class="sr-only">. Jump to the signup form by clicking this link.</span><span aria-hidden="true"> >></span></a>
         </article>
-        <article class="card class-card">
-          <h3>A102</h3>
-          <p>Intermediate</p>
-          <p>4pm - 5pm</p>
-          <p>Tuesdays & Thursdays</p>
-          <img src="images/aiming-blurry-target-slim.jpg" alt="A target with an arrow in it">
+        <article class="card class-card" id="class-a102">
+          <h3><span class="sr-only">Class Name</span>A102</h3>
+          <h4 class="sr-only" id="class-a102-info">Class Information</h4>
+          <p><span class="sr-only">Class Level: </span>Intermediate</p>
+          <p><span class="sr-only">Class Time: </span>4pm - 5pm</p>
+          <p><span class="sr-only">Class Days: </span>Tuesdays & Thursdays</p>
+          <img src="images/aiming-blurry-target-slim.jpg" alt="An archer">
           <div class="class-description">
+            <h4 class="sr-only" id="class-a102-desc">Class Description</h4>
             <p>A102 is an intermediate archery course that focuses on intermediate archery safety, form, and introduces new equipment styles of shooting Recurve and Compound bows. Fun games and form reinforcement techniques are emphasized in this class.</p>
             <p>Prerequisites: A101 or reccomendation from private teacher. Minimum age 8 years old or 7 w/ pre-evaluation.</p>
           </div>
-          <p>$120 / Month</p>
-          <a href="index.html#signup-section">Sign Up >></a>
+          <h4 class="sr-only">Class Cost</h4>
+          <p id="class-a102-cost">$120 / Month</p>
+          <a href="index.html#signup-section">Sign Up<span class="sr-only">. Jump to the signup form by clicking this link.</span><span aria-hidden="true"> >></span></a>
         </article>
-        <article class="card class-card">
-          <h3>A103</h3>
-          <p>Advanced</p>
-          <p>5pm - 6pm</p>
-          <p>Tuesdays & Thursdays</p>
+        <article class="card class-card" id="class-a103">
+          <h3><span class="sr-only">Class Name</span>A103</h3>
+          <h4 class="sr-only" id="class-a103-info">Class Information</h4>
+          <p><span class="sr-only">Class Level: </span>Advanced</p>
+          <p><span class="sr-only">Class Time: </span>5pm - 6pm</p>
+          <p><span class="sr-only">Class Days: </span>Tuesdays & Thursdays</p>
           <img src="images/multi-bullseye-card.jpg" alt="A target with an arrow in it">
           <div class="class-description">
+            <h4 class="sr-only" id="class-a103-desc">Class Description</h4>
             <p>This class focuses on a continued education towards tournament styles of shooting used by many archery tournament associations from around the world. Along with the tournament lesson, participants receive continued knowledge around their shooting form and advice on personal equipment selections.</p>
             <p>Prerequisites: A101/A102 or equivelant. Minimum age  8 years old or 7 w/ pre-evaluation.</p>
           </div>
-          <p>$120 / Month</p>
-          <a href="index.html#signup-section">Sign Up >></a>
+          <h4 class="sr-only">Class Cost</h4>
+          <p id="class-a103-cost">$120 / Month</p>
+          <a href="index.html#signup-section">Sign Up<span class="sr-only">. Jump to the signup form by clicking this link.</span><span aria-hidden="true"> >></span></a>
         </article>
-        <article class="card class-card">
-          <h3 class="class-name">Tutoring</h3>
-          <p class="card-level">Private</p>
-          <p class="class-details">1hr Sessions</p>
-          <p class="class-details">By Appointment</p>
-          <img src="images/class-card-tutoring.jpg" alt="A target with an arrow in it">
+        <article class="card class-card" id="class-private">
+          <h3 class="class-name"><span class="sr-only">Class Name</span>Tutoring</h3>
+          <h4 class="sr-only" id="class-private-info">Class Information</h4>
+          <p class="card-level"><span class="sr-only">Class Level: </span>Private</p>
+          <p class="class-details"><span class="sr-only">Class Length: </span>1hr Sessions</p>
+          <p class="class-details"><span class="sr-only">Class Days: </span>By Appointment</p>
+          <img src="images/class-card-tutoring.jpg" alt="An archer aiming downrange at a target out of focus">
           <div class="class-description">
-            <p>Expert guidance by a USA Archery-ceritfied coach</p>
-            <table class="tutoring-price-table">
+            <h4 class="sr-only" id="class-private-desc">Class Description</h4>
+            <p>Expert guidance by a USA Archery-certified coach. Packages are as follows:</p>
+            <table class="tutoring-price-table" id="tutoring-table">
               <tr>
                 <td>1 Lesson</td>
                 <td>$50</td>
@@ -154,8 +171,9 @@
               </tr>
             </table>
           </div>
-          <p>$50 - $380</p>
-          <a href="index.html#signup-section">Sign Up >></a>
+          <h4 class="sr-only">Class Cost</h4>
+          <p id="class-private-cost">$50 - $380</p>
+          <a href="index.html#signup-section">Sign Up<span class="sr-only">. Jump to the signup form by clicking this link.</span><span aria-hidden="true"> >></span></a>
         </article>
       </div>
     </section>
