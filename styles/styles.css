@@ -93,6 +93,12 @@ footer > p:first-of-type {
   grid-area: disc;
   color: white;
 }
+footer > a[href="sitemap.html"] {
+  color: white;
+}
+footer > a[href="sitemap.html"]:visited {
+  color: #ecb722;
+}
 @media screen and (max-width: 1400px) {
   header, main, footer {
     max-width: 100%;
@@ -556,11 +562,11 @@ button, input, select, textarea {
   flex-flow: row wrap;
   justify-content: space-between;
 }
-.sitemap-list > li {
+.sitemap-list > div {
   display: flex;
   flex-flow: column nowrap;
   margin: 1rem;
 }
-.sitemap-list > li > ul {
+.sitemap-list > div > ul {
   margin-top: 1rem;
 }
